@@ -134,7 +134,12 @@ namespace Lab6
                 throw new FileNotFoundException("Файл не найден");
             }
         }
-     
+        unsafe void Point()
+        {
+            int pol = exc.numb;
+            int* point = &pol;
+            NullEx(*point);
+        }
         public void NullEx(int? point)
         {
             if (point != null)
